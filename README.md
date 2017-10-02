@@ -3,6 +3,8 @@
  Extract all .zip and put the .dll files in the same directory as the .exe
 
  .dll sources:
+ 
+ 
 	NVIDIA GPU Computing Toolkit:
 	- cublas
 	- cudart
