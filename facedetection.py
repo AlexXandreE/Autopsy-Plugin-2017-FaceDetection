@@ -256,7 +256,7 @@ class FaceModule(DataSourceIngestModule):
             return IngestModule.ProcessResult.OK
 
         if returnCode:
-            if returnCode <= errorListDetection:
+            if returnCode <= len(self.errorListDetection):
                 self.log(Level.SEVERE, self.errorListDetection[returnCode])
             else :
                 self.log(Level.SEVERE, "unknown error ocurred in Facial_Detection.exe! it returned: " + str(returnCode))
@@ -291,7 +291,7 @@ class FaceModule(DataSourceIngestModule):
                 return IngestModule.ProcessResult.OK
 
             if returnCode:
-                if returnCode <= errorListRecognition:
+                if returnCode <= len(self.errorListRecognition):
                     self.log(Level.SEVERE, self.errorListRecognition[returnCode])
                 else :
                     self.log(Level.SEVERE, "unknown error ocurred in Facial_Recognition.exe! it returned: " + str(returnCode))
